@@ -1,0 +1,26 @@
+﻿@model HastaneRandevu.ViewModels.Auth.AuthLogin
+
+<h1>HASTANE RANDEVU SİSTEMİ</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary();
+
+    <div>
+        @Html.LabelFor(x => x.TcKimlik)
+        @Html.EditorFor(x => x.TcKimlik)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Sifre)
+        @Html.EditorFor(x => x.Sifre)
+    </div>
+
+    <div class="btn btn-primary btn-xs">
+        <input type="reset" value="Temizle" />
+    </div>
+
+    <div class="btn btn-primary btn-xs">
+        <input type="submit" value="Giris Yap" />
+    </div>
+}
